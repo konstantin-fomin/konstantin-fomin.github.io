@@ -1,0 +1,268 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'DejaVu Sans', Arial, sans-serif;
+  font-size: 9.5pt;
+  color: #222;
+  background: #fff;
+}
+
+/* ── HEADER ───────────────────────────────────────────── */
+.header {
+  background: #2C4A52;
+  color: #fff;
+  text-align: center;
+  padding: 28px 24px 24px;
+}
+.header h1 {
+  font-size: 24pt;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  line-height: 1.15;
+}
+.header .title {
+  font-size: 9.5pt;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-top: 6px;
+  color: #a8c4cc;
+  font-weight: 400;
+}
+
+/* ── TWO-COLUMN BODY ──────────────────────────────────── */
+.body {
+  display: flex;
+  min-height: 900px;
+}
+
+/* LEFT */
+.left {
+  width: 34%;
+  background: #f5f7f7;
+  border-right: 1px solid #dde4e6;
+  padding: 22px 16px 22px 18px;
+}
+
+/* RIGHT */
+.right {
+  width: 66%;
+  padding: 22px 22px 22px 20px;
+}
+
+/* ── SECTION HEADERS ─────────────────────────────────── */
+.section-title {
+  font-size: 9pt;
+  font-weight: 700;
+  color: #C85A2A;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  border-bottom: 1.5px solid #C85A2A;
+  padding-bottom: 3px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+.section-title:first-child {
+  margin-top: 0;
+}
+
+/* ── LEFT: CONTACTS ──────────────────────────────────── */
+.contact-block {
+  line-height: 1.75;
+  color: #333;
+}
+.contact-block a {
+  color: #2C4A52;
+  text-decoration: none;
+  word-break: break-all;
+}
+.contact-row {
+  display: flex;
+  gap: 6px;
+  align-items: baseline;
+}
+.contact-icon {
+  color: #2C4A52;
+  font-weight: 700;
+  min-width: 14px;
+  font-size: 8.5pt;
+}
+
+/* ── LEFT: SKILLS ────────────────────────────────────── */
+.skills-list {
+  list-style: none;
+  padding: 0;
+}
+.skills-list li {
+  padding: 2.5px 0 2.5px 12px;
+  position: relative;
+  line-height: 1.5;
+  color: #333;
+}
+.skills-list li::before {
+  content: '▪';
+  position: absolute;
+  left: 0;
+  color: #2C4A52;
+  font-size: 8pt;
+  top: 1px;
+}
+
+.skill-group {
+  font-size: 8pt;
+  font-weight: 700;
+  color: #2C4A52;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 10px 0 4px;
+}
+.skill-group:first-child {
+  margin-top: 0;
+}
+
+/* ── LEFT: LANGUAGES ─────────────────────────────────── */
+.lang-item {
+  margin-bottom: 7px;
+  line-height: 1.5;
+}
+.lang-name {
+  font-weight: 700;
+  color: #1a1a1a;
+}
+.lang-level {
+  color: #555;
+}
+.lang-note {
+  color: #777;
+  font-size: 8.5pt;
+}
+
+/* ── RIGHT: SUMMARY ──────────────────────────────────── */
+.summary-box {
+  background: #eef3f4;
+  border-left: 3.5px solid #2C4A52;
+  padding: 11px 14px;
+  border-radius: 0 4px 4px 0;
+  line-height: 1.65;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+/* ── RIGHT: WORK EXPERIENCE ──────────────────────────── */
+.job {
+  margin-bottom: 16px;
+}
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 1px;
+}
+.job-company {
+  font-weight: 700;
+  font-size: 10pt;
+  color: #1a1a1a;
+}
+.job-period {
+  font-size: 8pt;
+  color: #666;
+  white-space: nowrap;
+  margin-left: 8px;
+}
+.job-role {
+  font-style: italic;
+  color: #2C4A52;
+  font-size: 8.5pt;
+  margin-bottom: 3px;
+}
+.job-meta {
+  font-size: 8pt;
+  color: #777;
+  margin-bottom: 7px;
+  line-height: 1.5;
+}
+.job-meta b {
+  color: #555;
+  font-weight: 600;
+}
+.job-list {
+  list-style: none;
+  padding: 0;
+}
+.job-list li {
+  padding: 2.5px 0 2.5px 12px;
+  position: relative;
+  line-height: 1.5;
+  color: #333;
+}
+.job-list li::before {
+  content: '–';
+  position: absolute;
+  left: 0;
+  color: #2C4A52;
+  font-weight: 700;
+}
+
+/* ── IMPACT BLOCK ────────────────────────────────────── */
+.impact-block {
+  background: #f0f5f6;
+  border-left: 3px solid #2C4A52;
+  padding: 8px 12px;
+  margin-top: 9px;
+  border-radius: 0 3px 3px 0;
+}
+.impact-title {
+  font-weight: 700;
+  font-size: 8pt;
+  color: #2C4A52;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 5px;
+}
+.impact-list {
+  list-style: none;
+  padding: 0;
+}
+.impact-list li {
+  padding: 2px 0 2px 12px;
+  position: relative;
+  line-height: 1.5;
+  color: #333;
+}
+.impact-list li::before {
+  content: '◆';
+  position: absolute;
+  left: 0;
+  color: #C85A2A;
+  font-size: 5.5pt;
+  top: 5px;
+}
+
+/* ── EDUCATION ───────────────────────────────────────── */
+.edu-item {
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+.edu-name {
+  font-weight: 700;
+  font-size: 9pt;
+}
+.edu-degree {
+  color: #555;
+  font-size: 8.5pt;
+}
+.edu-year {
+  color: #888;
+  font-size: 8pt;
+}
+
+/* ── DIVIDER ─────────────────────────────────────────── */
+.job-divider {
+  border: none;
+  border-top: 1px dashed #dde4e6;
+  margin: 14px 0;
+}
