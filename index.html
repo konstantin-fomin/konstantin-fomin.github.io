@@ -55,7 +55,7 @@ nav { position:fixed; top:0; left:0; width:100%; background:rgba(13,26,30,0.96);
 .nav-links a:hover { color:var(--orange); border-color:var(--orange); }
 
 /* HERO */
-#hero { min-height:auto; display:flex; align-items:center; justify-content:center; flex-direction:column; position:relative; z-index:1; padding-top:52px; text-align:center; }
+#hero { min-height:100vh; display:flex; align-items:center; justify-content:center; flex-direction:column; position:relative; z-index:1; padding-top:52px; text-align:center; }
 .hero-status { font-family:"Press Start 2P",monospace; font-size:7px; color:var(--green); letter-spacing:2px; margin-bottom:28px; animation:blink 1.2s infinite; }
 @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.3} }
 
@@ -139,8 +139,8 @@ nav { position:fixed; top:0; left:0; width:100%; background:rgba(13,26,30,0.96);
 @keyframes bounce { 0%,100%{transform:translateX(-50%) translateY(0)} 50%{transform:translateX(-50%) translateY(8px)} }
 
 /* SECTIONS */
-section { position:relative; z-index:1; padding:40px 24px; max-width:900px; margin:0 auto; }
-.section-header { display:flex; align-items:center; gap:16px; margin-bottom:24px; }
+section { position:relative; z-index:1; padding:80px 24px; max-width:900px; margin:0 auto; }
+.section-header { display:flex; align-items:center; gap:16px; margin-bottom:48px; }
 .section-num { font-family:"Press Start 2P",monospace; font-size:8px; color:var(--orange); border:2px solid var(--orange); padding:4px 8px; background:rgba(200,90,42,0.1); }
 .section-title { font-family:"Press Start 2P",monospace; font-size:clamp(9px,1.8vw,13px); color:#fff; letter-spacing:2px; }
 .section-line { flex:1; height:2px; background:linear-gradient(90deg,var(--teal),transparent); }
@@ -190,8 +190,8 @@ section { position:relative; z-index:1; padding:40px 24px; max-width:900px; marg
 .project-text { font-family:"VT323",monospace; font-size:17px; line-height:1.5; color:var(--text); }
 
 /* DOWNLOAD */
-.download-box { background:var(--bg2); border:2px solid var(--teal); padding:24px; text-align:center; }
-.download-box p { font-family:"VT323",monospace; font-size:20px; color:var(--text-dim); margin-bottom:16px; line-height:1.6; }
+.download-box { background:var(--bg2); border:2px solid var(--teal); padding:40px; text-align:center; }
+.download-box p { font-family:"VT323",monospace; font-size:20px; color:var(--text-dim); margin-bottom:28px; line-height:1.6; }
 .download-btns { display:flex; gap:16px; justify-content:center; flex-wrap:wrap; }
 
 /* CONTACT */
