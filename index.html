@@ -192,6 +192,11 @@ section { position:relative; z-index:1; padding:30px 24px; max-width:900px; marg
 .project-title a { color:var(--orange); text-decoration:none; border-bottom:1px dotted var(--orange); }
 .project-title a:hover { color:var(--teal-light); border-bottom-color:var(--teal-light); }
 .project-text { font-family:"VT323",monospace; font-size:17px; line-height:1.5; color:var(--text); }
+.project-featured { display:flex; gap:20px; align-items:flex-start; background:var(--bg2); border:2px solid var(--teal); padding:20px; position:relative; margin-bottom:16px; }
+.project-featured::before { content:""; position:absolute; left:-5px; top:18px; width:8px; height:8px; background:var(--orange); }
+.project-featured-info { flex:1 1 auto; min-width:0; }
+.project-embed { flex:0 0 552px; max-width:100%; }
+.project-embed iframe { display:block; width:100%; height:167px; border:2px solid var(--teal); }
 
 /* DOWNLOAD */
 .download-box { background:var(--bg2); border:2px solid var(--teal); padding:40px; text-align:center; }
@@ -254,6 +259,10 @@ a:focus-visible,button:focus-visible {
   .exp-item { padding:18px; }
   .download-box { padding:24px; }
   .about-intro { padding:20px; }
+
+  /* Featured project: stack text over embed */
+  .project-featured { flex-direction:column; }
+  .project-embed { flex-basis:auto; width:100%; }
 }
 
 @media(max-width:640px){
@@ -471,14 +480,19 @@ a:focus-visible,button:focus-visible {
     <h2 class="section-title" id="title-projects">PROJECTS</h2>
     <div class="section-line"></div>
   </div>
+  <div class="project-featured fade-in">
+    <div class="project-featured-info">
+      <div class="project-title" id="project3-title"><a href="https://konstantinfomin.itch.io/corporate-frog" target="_blank">Corporate Frog</a></div>
+      <p class="project-text" id="project3-text">Released an idle/clicker game on Unity. Designed game mechanics, progression system, upgrades, UI screens and pacing balance. Built and published on itch.io.</p>
+    </div>
+    <div class="project-embed">
+      <iframe frameborder="0" src="https://itch.io/embed/4628273?bg_color=24262A&amp;fg_color=E6E0D2&amp;link_color=D6B84A&amp;border_color=3A3D42" width="552" height="167" title="Corporate Frog on itch.io" loading="lazy"><a href="https://konstantinfomin.itch.io/corporate-frog">CORPORATE FROG by konstantin.fomin</a></iframe>
+    </div>
+  </div>
   <div class="projects-grid">
     <div class="project-card fade-in">
       <div class="project-title" id="project1-title">Internal AI-assisted QA Tool</div>
       <p class="project-text" id="project1-text">AI-assisted internal tool for automating routine game data checks: logs, Excel files, Jira task data and localization texts. Helped reduce check time by 70% and lower the risk of human error.</p>
-    </div>
-    <div class="project-card fade-in">
-      <div class="project-title" id="project3-title"><a href="https://konstantinfomin.itch.io/corporate-frog" target="_blank">Corporate Frog</a></div>
-      <p class="project-text" id="project3-text">Released an idle/clicker game on Unity. Designed game mechanics, progression system, upgrades, UI screens and pacing balance. Built and published on itch.io.</p>
     </div>
   </div>
 </section>
