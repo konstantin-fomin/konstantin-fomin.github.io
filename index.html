@@ -631,14 +631,24 @@ const translations = {
   }
 };
 
-function setLang(lang) {
+function setLang(lang, updateUrl=true) {
+  if(lang!=="ru" && lang!=="en") lang = "en";
   document.querySelectorAll(".lang-btn").forEach(b => b.classList.toggle("active", b.textContent.toLowerCase()===lang));
+  document.documentElement.lang = lang;
   const t = translations[lang];
   for(const [id, text] of Object.entries(t)) {
     const el = document.getElementById(id);
     if(el) el.innerHTML = text;
   }
+  if(updateUrl) {
+    const url = new URL(window.location.href);
+    if(lang==="ru") url.searchParams.set("lang","ru");
+    else url.searchParams.delete("lang");
+    history.replaceState(null, "", url.pathname + url.search + url.hash);
+  }
 }
+
+setLang(new URLSearchParams(window.location.search).get("lang"), false);
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((e,i) => { if(e.isIntersecting) setTimeout(()=>e.target.classList.add("visible"),i*80); });
