@@ -225,6 +225,35 @@ a:focus-visible,button:focus-visible {
   outline:2px solid var(--yellow); outline-offset:4px;
 }
 
+/* ===== RESPONSIVE: tablets & mobile ===== */
+@media(max-width:768px){
+  /* Nav: hide links, keep logo + lang switcher */
+  .nav-links { display:none; }
+  nav { padding:0 16px; }
+  .nav-logo { margin-right:auto; }
+  .lang-switcher { top:10px; right:12px; }
+  .lang-btn { min-height:44px; display:flex; align-items:center; }
+
+  /* Section spacing */
+  section { padding:24px 16px; }
+  .section-header { margin-bottom:16px; }
+
+  /* Hero: trim letter-spacing so long words don't overflow */
+  .hero-name { letter-spacing:2px; }
+  .hero-title { letter-spacing:2px; }
+
+  /* Tap targets >= 44px tall */
+  .btn-pixel { min-height:44px; display:inline-flex; align-items:center; justify-content:center; padding:12px 20px; }
+
+  /* Contacts: 2 columns on mobile */
+  .contact-grid { grid-template-columns:repeat(2,1fr); }
+
+  /* Compact cards / experience */
+  .exp-item { padding:18px; }
+  .download-box { padding:24px; }
+  .about-intro { padding:20px; }
+}
+
 @media(max-width:640px){
   #hero { padding-left:16px; padding-right:16px; }
   .qa-scanner { width:100%; margin-bottom:22px; padding:11px 12px; }
@@ -233,6 +262,26 @@ a:focus-visible,button:focus-visible {
   .qa-pass { font-size:5px; }
   .bug-deco { width:120px; bottom:28px; right:20px; }
   .contact-icon { width:46px; height:46px; margin-bottom:10px; }
+}
+
+/* ===== RESPONSIVE: small phones ===== */
+@media(max-width:420px){
+  /* Hero title scales down, less letter-spacing */
+  .hero-name { letter-spacing:1px; }
+  .hero-title { font-size:18px; letter-spacing:1px; }
+
+  /* Stack hero & resume buttons full-width for big tap targets */
+  .hero-btns, .download-btns { flex-direction:column; align-items:stretch; width:100%; }
+  .hero-btns .btn-pixel, .download-btns .btn-pixel { width:100%; }
+
+  /* Hide decorative bug so it doesn't overlap full-width buttons */
+  .bug-deco { display:none; }
+
+  /* Contacts single column on very small screens */
+  .contact-grid { grid-template-columns:1fr; }
+
+  /* Tighter card padding */
+  .about-card, .skill-block, .project-card, .contact-item { padding:16px; }
 }
 
 @media(prefers-reduced-motion:reduce){
