@@ -161,6 +161,8 @@ section { position:relative; z-index:1; padding:30px 24px; max-width:900px; marg
 .skill-block-title { font-family:"Press Start 2P",monospace; font-size:7px; color:var(--orange); letter-spacing:1px; margin-bottom:16px; padding-bottom:8px; border-bottom:1px solid var(--teal); }
 .skill-item { display:flex; align-items:center; gap:8px; margin-bottom:8px; font-family:"VT323",monospace; font-size:17px; color:var(--text); }
 .skill-item::before { content:"▸"; color:var(--green); font-size:14px; flex-shrink:0; }
+.skill-item a { color:var(--orange); text-decoration:none; border-bottom:1px dotted var(--orange); }
+.skill-item a:hover { color:var(--teal-light); border-bottom-color:var(--teal-light); }
 .badge { display:inline-block; font-family:"Press Start 2P",monospace; font-size:5px; padding:3px 6px; margin-left:4px; }
 .badge-pass { background:rgba(78,201,78,0.15); color:var(--green); border:1px solid var(--green); }
 .badge-wip { background:rgba(232,200,78,0.15); color:var(--yellow); border:1px solid var(--yellow); }
@@ -356,14 +358,15 @@ a:focus-visible,button:focus-visible {
       <div class="skill-item">Jira · Confluence · Google Docs</div>
       <div class="skill-item">Android · iOS · Web · Windows</div>
       <div class="skill-item">NOX · Android Studio</div>
-      <div class="skill-item">Git <span class="badge badge-wip">WIP</span></div>
+      <div class="skill-item">Git, GitHub Actions (CI/CD), Docker, Linux</div>
+      <div class="skill-item">Postman, Swagger</div>
       <div class="skill-item">SQL <span class="badge badge-wip">WIP</span></div>
-      <div class="skill-item">Python · Postman <span class="badge badge-wip">WIP</span></div>
+      <div class="skill-item">Python <span class="badge badge-wip">WIP</span></div>
     </div>
     <div class="skill-block fade-in">
       <div class="skill-block-title" id="sk-title-4">ADDITIONAL</div>
       <div class="skill-item">AI-assisted QA tooling</div>
-      <div class="skill-item" id="sk-unity">Unity (game jams, personal projects)</div>
+      <div class="skill-item" id="sk-unity">Unity: released <a href="https://konstantinfomin.itch.io/corporate-frog" target="_blank">Corporate Frog</a> on itch.io (clicker/idle, progression, UI, balance)</div>
       <div class="skill-item" id="sk-gd">Game design &amp; mechanics</div>
     </div>
   </div>
@@ -395,8 +398,8 @@ a:focus-visible,button:focus-visible {
       <div class="init-title" id="init-title">INITIATIVES</div>
       <ul class="init-list">
         <li id="init1">Initiated and developed an internal AI-assisted tool for automating routine game data checks. Result: reduced check time by 70% (from several hours to 15–20 minutes) and minimized the risk of human error.</li>
-        <li id="init2">Proposed debug panel improvements: reduced user-switching from 5 steps to 2 and initiated new cheat commands for faster test environment setup — implemented by devs, adopted across the QA team.</li>
-        <li id="init3">Prepared internal QA documentation: practical guidelines, working materials for the QA team and cross-team interaction descriptions.</li>
+        <li id="init2">Prepared internal QA documentation: practical guidelines and working materials for the team. Reduced onboarding time for new QA specialists.</li>
+        <li id="init3">Proposed debug panel improvements: reduced user-switching from 5 steps to 2 and initiated new cheat commands for faster test environment setup — implemented by devs, adopted across the QA team.</li>
       </ul>
     </div>
   </div>
@@ -476,6 +479,11 @@ a:focus-visible,button:focus-visible {
       <span class="contact-label">LINKEDIN</span>
       <span class="contact-value">konstantin-fomin-qa</span>
     </a>
+    <a href="https://github.com/konstantin-fomin" class="contact-item fade-in" target="_blank">
+      <img class="contact-icon" src="assets/icons/contact-github.png" alt="GitHub icon">
+      <span class="contact-label">GITHUB</span>
+      <span class="contact-value">github.com/konstantin-fomin</span>
+    </a>
     <a href="tel:+79615098259" class="contact-item fade-in">
       <img class="contact-icon" src="assets/icons/contact-phone.png" alt="Phone icon">
       <span class="contact-label">PHONE</span>
@@ -523,7 +531,7 @@ const translations = {
     "sk-doc": "Feature doc review",
     "sk-title-3": "TOOLS & PLATFORMS",
     "sk-title-4": "ADDITIONAL",
-    "sk-unity": "Unity (game jams, personal projects)",
+    "sk-unity": "Unity: released <a href=\"https://konstantinfomin.itch.io/corporate-frog\" target=\"_blank\">Corporate Frog</a> on itch.io (clicker/idle, progression, UI, balance)",
     "sk-gd": "Game design & mechanics",
     "title-exp": "EXPERIENCE",
     "exp1-period": "Sep 2022 — Present",
@@ -537,8 +545,8 @@ const translations = {
     "exp1-6": "Manage the full defect lifecycle; verify fixes on required platforms and builds",
     "init-title": "INITIATIVES",
     "init1": "Initiated and developed an internal AI-assisted tool for automating routine game data checks. Result: reduced check time by 70% (from several hours to 15–20 minutes) and minimized the risk of human error.",
-    "init2": "Proposed debug panel improvements: reduced user-switching from 5 steps to 2 and initiated new cheat commands for faster test environment setup — implemented by devs, adopted across the QA team.",
-    "init3": "Prepared internal QA documentation: practical guidelines, working materials for the QA team and cross-team interaction descriptions.",
+    "init2": "Prepared internal QA documentation: practical guidelines and working materials for the team. Reduced onboarding time for new QA specialists.",
+    "init3": "Proposed debug panel improvements: reduced user-switching from 5 steps to 2 and initiated new cheat commands for faster test environment setup — implemented by devs, adopted across the QA team.",
     "exp2-period": "Mar 2021 — Aug 2022",
     "exp2-role": "Quality Engineer · Krasnodar, Russia",
     "exp2-1": "Manual testing of live-ops tasks: new features, UI/UX, balance, localization, visual elements and VFX",
@@ -592,7 +600,7 @@ const translations = {
     "sk-doc": "Ревью документации",
     "sk-title-3": "ИНСТРУМЕНТЫ И ПЛАТФОРМЫ",
     "sk-title-4": "ДОПОЛНИТЕЛЬНО",
-    "sk-unity": "Unity (геймджемы, личные проекты)",
+    "sk-unity": "Unity: выпустил <a href=\"https://konstantinfomin.itch.io/corporate-frog\" target=\"_blank\">Corporate Frog</a> на itch.io (кликер/idle, прогрессия, UI, баланс)",
     "sk-gd": "Геймдизайн и механики",
     "title-exp": "ОПЫТ РАБОТЫ",
     "exp1-period": "Сент. 2022 — настоящее время",
@@ -606,8 +614,8 @@ const translations = {
     "exp1-6": "Управляю полным жизненным циклом дефектов; проверяю исправления на нужных платформах и сборках",
     "init-title": "ИНИЦИАТИВЫ",
     "init1": "Инициировал и развивал внутренний AI-assisted инструмент для автоматизации рутинных проверок игровых данных. Результат: сокращение времени проверки на 70% (с нескольких часов до 15–20 минут) и минимизация человеческого фактора.",
-    "init2": "Инициировал улучшения debug-панели: сократил смену тестового пользователя с 5 шагов до 2 и предложил новые команды для быстрой подготовки тестовых окружений — внедрено разработчиками, используется всей QA-командой.",
-    "init3": "Подготовил внутреннюю QA-документацию: практические инструкции, рабочие материалы для отдела и описание взаимодействия с командами.",
+    "init2": "Подготовил внутреннюю QA-документацию: практические инструкции и рабочие материалы для отдела. Сократил время онбординга новых QA-специалистов.",
+    "init3": "Инициировал улучшения debug-панели: сократил смену тестового пользователя с 5 шагов до 2 и предложил новые команды для быстрой подготовки тестовых окружений — внедрено разработчиками, используется всей QA-командой.",
     "exp2-period": "Март 2021 — Авг. 2022",
     "exp2-role": "Quality Engineer · Краснодар, Россия",
     "exp2-1": "Ручное тестирование live-ops задач: новый функционал, UI/UX, баланс, локализация, визуальные элементы и VFX",
