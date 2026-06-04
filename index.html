@@ -685,6 +685,18 @@ function setLang(lang, updateUrl=true) {
     const el = document.getElementById(id);
     if(el) el.innerHTML = text;
   }
+  // Highlight the resume matching the current language and move it first
+  const dlEn = document.getElementById("dl-en");
+  const dlRu = document.getElementById("dl-ru");
+  if(dlEn && dlRu) {
+    const enPrimary = lang === "en";
+    dlEn.classList.toggle("btn-primary", enPrimary);
+    dlEn.classList.toggle("btn-secondary", !enPrimary);
+    dlRu.classList.toggle("btn-primary", !enPrimary);
+    dlRu.classList.toggle("btn-secondary", enPrimary);
+    dlEn.style.order = enPrimary ? "0" : "1";
+    dlRu.style.order = enPrimary ? "1" : "0";
+  }
   if(updateUrl) {
     const url = new URL(window.location.href);
     if(lang==="ru") url.searchParams.set("lang","ru");
